@@ -1,2 +1,2 @@
 # my_course
-Learn
+Learning jQuery
