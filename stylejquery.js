@@ -138,4 +138,29 @@ $(document).ready(function() {
 
     //chilren, find
     $('.cont').children().css("height", 40);
+
+    //siblings, Next, Previous
+    //$('div:contains("Siblings")').siblings().css("border", "2px solid #00F"); //all div  just div contain word siblings
+    $('div').siblings(".select").css("border", "2px solid #00F"); //just .select take effect
+    $('.select').next().css("border", "2px solid red"); //next element
+    //$('div').nextAll().css("border", "2px solid #00F"); //All next element
+    //$('div').nextUntil().css("border", "2px solid #00F"); //All next element Until element contains class .select
+    //$('.select').prev().css("backgroundColor", "pink"); //prev element
+    //$('.select').prevAll().css("backgroundColor", "pink"); //All prev element
+
+    $('div').first().css("backgroundColor", "pink"); //First Element From Type Div
+    //$('div').first().next().css("backgroundColor", "pink");
+    $('div').last().css("backgroundColor", "pink"); //Last Element From Type Div
+    //$('div').last().prev().css("backgroundColor", "pink");
+
+    $('p').eq(-2).css("backgroundColor", "pink"); //Before Last Element From Type p
+
+    $('p').filter('.select').css("color", "red");
+
+    $('p').not('.select').css("fontSize", "24px"); //All Except p Contain class select
+
+
+
+
+
 });
