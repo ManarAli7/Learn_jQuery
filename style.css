@@ -67,3 +67,10 @@ button {
     color: #FFF;
     background-color: #000;
 }
+
+section div,
+p {
+    padding: 10px;
+    background-color: #DDD;
+    margin: 10px;
+}
