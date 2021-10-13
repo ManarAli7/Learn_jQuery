@@ -74,3 +74,9 @@ p {
     background-color: #DDD;
     margin: 10px;
 }
+
+img {
+    display: block;
+    margin: 20px;
+    display: none;
+}
