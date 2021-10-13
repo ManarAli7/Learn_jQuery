@@ -160,7 +160,57 @@ $(document).ready(function() {
     $('p').not('.select').css("fontSize", "24px"); //All Except p Contain class select
 
 
+    //:header, :animated, :focus, :parent, :has, :empty, hidden, :visible 
+    $(":header").css("color", "red");
 
+    $("input[type=text]").focus();
+    $(":focus").css("padding", "20px");
+
+    //[attr] , [atr *=], [atr ~=], [atr ^=]
+    $("[lang='en']").css("color", "blue");
+
+    //bind
+    $("p").bind("mouseenter mouseleave", function() {
+        //$(this).toggleClass("div3");
+    });
+
+    /*$("p").bind({
+        mouseenter: function() { $(this).css("color", "red");},
+        mouseleave: function() { $(this).css("color", "black");}
+    });*/
+
+    //bind delegate, on
+    /*$(".coustom").bind("coustomEvent", function(event, myName, myheight, mywidth) {
+        $(this).text("Hello " + myName);
+        $(this).height(myheight).width(mywidth);
+    });
+    $(".mycoustom").click(function() {
+        $(".coustom").trigger("coustomEvent", ['Manar', '40px', '300px']);
+    });
+    */
+
+    /*$(".mycoustom").on("click", function() {
+        $(".coustom").hide();
+        $(".mycoustom").hide(2000);
+    });*/
+
+    /*$("p").on({
+        mouseenter: function() { $(this).css("color", "red"); },
+        mouseleave: function() { $(this).css("color", "black"); }
+    });*/
+
+    $(".coustom").on("coustomEvent", function(event, myName, myheight, mywidth) {
+        $(this).text("Hello " + myName);
+        $(this).height(myheight).width(mywidth);
+    });
+    $(".mycoustom").on('click', function() {
+        $(".coustom").trigger("coustomEvent", ['Manar', '40px', '300px']);
+    });
+
+    $("a").on('click', function(event) {
+        event.preventDefault();
+        $("img").fadeIn(1000);
+    });
 
 
 });
